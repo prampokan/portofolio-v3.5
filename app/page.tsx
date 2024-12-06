@@ -186,8 +186,9 @@ export default function Home() {
             handling client requests to experimenting with fun, side projects.
           </p>
           <div className="grid grid-cols-2 gap-2 mt-7">
-            {projects.map((item) => (
+            {projects.map((item, i) => (
               <Card
+                key={i}
                 title={item.title}
                 description={item.description}
                 image={item.image}

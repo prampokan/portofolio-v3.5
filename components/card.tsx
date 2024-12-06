@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Globe, Github } from "lucide-react";
 
 interface CardProps {
+  key: any;
   title: string;
   image: string;
   description: string;
@@ -12,6 +13,7 @@ interface CardProps {
 }
 
 export default function Card({
+  key,
   title,
   image,
   description,
@@ -20,7 +22,7 @@ export default function Card({
   github,
 }: CardProps) {
   return (
-    <div className="border h-auto rounded-xl overflow-hidden">
+    <div className="border h-auto rounded-xl overflow-hidden" key={key}>
       <Link href={website || "/"} target="_blank" className="w-full">
         <Image src={image} alt="Image" width={500} height={500} />
       </Link>
@@ -30,8 +32,11 @@ export default function Card({
           <p className="text-sm">{description}</p>
         </div>
         <div className="flex flex-wrap mt-5 gap-1">
-          {tech.map((item) => (
-            <span className="bg-zinc-100 dark:bg-zinc-900 text-[11px] p-1 rounded-md">
+          {tech.map((item, i) => (
+            <span
+              key={i}
+              className="bg-zinc-100 dark:bg-zinc-900 text-[11px] p-1 rounded-md"
+            >
               {item}
             </span>
           ))}
