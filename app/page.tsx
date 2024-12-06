@@ -153,7 +153,7 @@ export default function Home() {
           </p>
           <Accordion type="single" collapsible className="w-full mt-5">
             {experience.map((item, i) => (
-              <AccordionItem value={`item-${i + 1}`}>
+              <AccordionItem value={`item-${i + 1}`} key={i}>
                 <AccordionTrigger>
                   <div className="flex items-center gap-x-4">
                     <div className="w-8 h-8">
