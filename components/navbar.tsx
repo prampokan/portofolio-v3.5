@@ -1,14 +1,14 @@
 import { ThemeToggler } from "./theme-toggler";
 import { Button } from "./ui/button";
+import Link from "next/link";
 import { House, Briefcase, Code, MessageCircle } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 const nav = [
-  { icon: <House />, name: "Home" },
-  { icon: <Briefcase />, name: "Work Experience" },
-  { icon: <Code />, name: "Project" },
-  { icon: <MessageCircle />, name: "Chat!" },
-  { icon: <ThemeToggler />, name: "Theme" },
+  { icon: <House />, name: "Home", href: "#home" },
+  { icon: <Briefcase />, name: "Work Experience", href: "#work" },
+  { icon: <Code />, name: "Project", href: "#project" },
+  { icon: <MessageCircle />, name: "Chat!", href: "#chat" },
 ];
 
 export default function Navbar() {
@@ -19,15 +19,27 @@ export default function Navbar() {
         {nav.map((item, i) => (
           <Tooltip delayDuration={100} key={i}>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon">
-                {item.icon}
-              </Button>
+              <Link href={item.href || "#"}>
+                <Button variant="ghost" size="icon">
+                  {item.icon}
+                </Button>
+              </Link>
             </TooltipTrigger>
             <TooltipContent>
               <p>{item.name}</p>
             </TooltipContent>
           </Tooltip>
         ))}
+        <Tooltip delayDuration={100}>
+          <TooltipTrigger asChild>
+            <Button variant="ghost" size="icon">
+              <ThemeToggler />
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Theme</p>
+          </TooltipContent>
+        </Tooltip>
       </div>
     </div>
   );
