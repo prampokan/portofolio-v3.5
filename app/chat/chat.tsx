@@ -11,7 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { SendHorizontal, Github, LogOut, Smile } from "lucide-react";
+import { SendHorizontal, Github, LogOut } from "lucide-react";
 import { db, auth } from "@/lib/firebase";
 import {
   signInWithPopup,
