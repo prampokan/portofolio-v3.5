@@ -176,7 +176,7 @@ export default function Home() {
               <AccordionItem value={`item-${i + 1}`} key={i}>
                 <AccordionTrigger>
                   <div className="flex items-center gap-x-4">
-                    <div className="w-8 h-8">
+                    <div className="w-6 h-6 rounded-sm overflow-hidden">
                       <Image
                         src={item.logo || "/vercel.svg"}
                         alt="logo"

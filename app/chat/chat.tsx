@@ -31,6 +31,7 @@ export default function Chat() {
   const [chats, setChats] = useState([]);
   const [formData, setFormData] = useState("");
   const [user, loading, error] = useAuthState(auth);
+  const [loadingUpload, setLoadingUpload] = useState(false);
 
   const googleAuth = new GoogleAuthProvider();
   const githubAuth = new GithubAuthProvider();
@@ -78,6 +79,7 @@ export default function Chat() {
 
   const addChat = async (e: any) => {
     e.preventDefault();
+    setLoadingUpload(true);
     try {
       await addDoc(collection(db, "chats"), {
         uid: user?.uid,
@@ -91,6 +93,7 @@ export default function Chat() {
       console.error(error);
     } finally {
       setFormData("");
+      setLoadingUpload(false);
     }
   };
 
@@ -237,6 +240,7 @@ export default function Chat() {
               className="rounded-full"
               size="icon"
               variant="secondary"
+              disabled={loadingUpload}
             >
               <SendHorizontal />
             </Button>
