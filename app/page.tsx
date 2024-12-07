@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Card from "@/components/card";
 import Chat from "./chat/chat";
 import {
@@ -10,7 +11,17 @@ import {
 import Marquee from "@/components/ui/marquee";
 import { MoveUpRight } from "lucide-react";
 
-const list = [{ name: "Linkedin" }, { name: "Github" }, { name: "Email" }];
+const list = [
+  { name: "Linkedin", href: "https://www.linkedin.com/in/pramudya-diagusta/" },
+  { name: "Github", href: "https://github.com/prampokan" },
+  { name: "Email" },
+];
+
+const emailAddress = "prampokan@gmail.com";
+const handleEmail = () => {
+  const url = `mailto:${emailAddress}`;
+  window.location.href = url;
+};
 
 const tech = [
   {
@@ -99,13 +110,15 @@ export default function Home() {
           </p>
           <ul className="mt-5 flex gap-x-5">
             {list.map((item, i) => (
-              <li
+              <Link
+                href={item.href || "/"}
+                target="_blank"
                 key={i}
                 className="flex items-center gap-x-1 cursor-pointer hover:text-blue-500 transition-all duration-300 group"
               >
                 {item.name}
                 <MoveUpRight size="15" />
-              </li>
+              </Link>
             ))}
           </ul>
 
