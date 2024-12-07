@@ -39,16 +39,12 @@ export default function Chat() {
   const { toast } = useToast();
 
   const SignInWithGoogle = async () => {
-    const userCredential = await signInWithPopup(auth, googleAuth);
-    const user = userCredential.user;
-    console.log("google", user);
+    await signInWithPopup(auth, googleAuth);
   };
 
   const SignInWithGithub = async () => {
     try {
-      const userCredential = await signInWithPopup(auth, githubAuth);
-      const user = userCredential.user;
-      console.log("github", user);
+      await signInWithPopup(auth, githubAuth);
     } catch (error: any) {
       if (error.code === "auth/account-exists-with-different-credential") {
         toast({
