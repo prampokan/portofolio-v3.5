@@ -20,9 +20,9 @@ const tech = [
   { name: "Typescript", logo: "/typescript.png" },
   { name: "React", logo: "/react.png" },
   { name: "Next", logo: "/next.png" },
-  { name: "Astro", logo: "/astro.png" },
+  { name: "Astro", logo: "/astro.jpg" },
   { name: "Nest", logo: "/nest.svg" },
-  { name: "Firebase", logo: "/firebase.webp" },
+  { name: "Firebase", logo: "/firebase.png" },
   { name: "Supabase", logo: "/supabase.png" },
 ];
 
