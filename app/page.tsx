@@ -70,8 +70,8 @@ export default function Home() {
         </section>
 
         {/* WORK EXPERIENCE */}
-        <section className="pt-28" id="work">
-          <BlurFade delay={BLUR_FADE_DELAY * 4}>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <section className="pt-28" id="work">
             <h1 className="text-xl font-semibold tracking-tight">Experience</h1>
             <p className="mt-5 leading-loose">{DATA.experience}</p>
             <Accordion type="single" collapsible className="w-full mt-5">
@@ -101,12 +101,12 @@ export default function Home() {
                 </AccordionItem>
               ))}
             </Accordion>
-          </BlurFade>
-        </section>
+          </section>
+        </BlurFade>
 
         {/* PROJECTS */}
-        <section className="pt-28" id="project">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <section className="pt-28" id="project">
             <h1 className="text-xl font-semibold tracking-tight">
               Recent Projects
             </h1>
@@ -124,19 +124,19 @@ export default function Home() {
                 />
               ))}
             </div>
-          </BlurFade>
-        </section>
+          </section>
+        </BlurFade>
 
         {/* CHATS */}
-        <section className="pt-28" id="chat">
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
+        <BlurFade delay={BLUR_FADE_DELAY * 6}>
+          <section className="pt-28" id="chat">
             <Chat />
-          </BlurFade>
-        </section>
+          </section>
+        </BlurFade>
 
         {/* CALL TO ACTION */}
-        <section className="flex justify-center mt-28">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+        <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <section className="flex justify-center mt-28">
             <div className="h-[13rem] w-[25rem] border-2 dark:border-zinc-800 border-zinc-100 bg-zinc-50 dark:bg-zinc-900 rounded-lg cursor-pointer -rotate-6 hover:rotate-0 hover:scale-110 transition-all duration-300 p-5 relative">
               <div className="absolute">
                 <h1 className="font-semibold text-lg tracking-tight">
@@ -158,8 +158,8 @@ export default function Home() {
                 <p className="text-xs text-zinc-500">prampokan@gmail.com</p>
               </div>
             </div>
-          </BlurFade>
-        </section>
+          </section>
+        </BlurFade>
       </div>
     </main>
   );
