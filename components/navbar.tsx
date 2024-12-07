@@ -6,7 +6,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 const nav = [
   { icon: <House />, name: "Home", href: "#home" },
-  { icon: <Briefcase />, name: "Work Experience", href: "#work" },
+  { icon: <Briefcase />, name: "Experience", href: "#work" },
   { icon: <Code />, name: "Project", href: "#project" },
   { icon: <MessageCircle />, name: "Chat!", href: "#chat" },
 ];
