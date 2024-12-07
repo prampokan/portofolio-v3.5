@@ -9,12 +9,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Marquee from "@/components/ui/marquee";
-import { MoveUpRight } from "lucide-react";
+import { HeartOff, MoveUpRight } from "lucide-react";
 
 const list = [
   { name: "Linkedin", href: "https://www.linkedin.com/in/pramudya-diagusta/" },
   { name: "Github", href: "https://github.com/prampokan" },
-  { name: "Email" },
+  { name: "Email", href: "mailto:prampokan@gmail.com" },
 ];
 
 const tech = [
@@ -35,22 +35,35 @@ const experience = [
   {
     name: "Karya Super Dev",
     logo: "/karyasuperdev.png",
+    description:
+      "Karya Super Dev is an IT consulting company that provides a wide range of IT services. I work here as a Software Engineer, handling various client requests. Additionally, I serve as a Product Engineer for the Go Bisnis Digital division, which is one of Karya Super Dev's products.",
+    href: "https://karyasuperdev.com/",
   },
   {
     name: "Oddin",
     logo: "/oddin.jpg",
+    description:
+      "Oddin is a software house founded by my partner and me to accommodate various client requests, ranging from landing page websites to complex information system websites. We have already built a portfolio with several reputable clients.",
   },
   {
     name: "Fn Digital Code",
     logo: "/fn.webp",
+    description:
+      "I work here as a front end website developer. Collaborate with a very competent team to create a game top up website, using technology such as javascript, typescript, next js, and react js. Working together using Jira and Github.",
   },
   {
     name: "Bangkit Academy",
     logo: "/bangkit.png",
+    description:
+      "I’m joining Bangkit Academy by Kampus Merdeka MSIB Batch 6. Here I learn anything about cloud computing using Google Cloud Platform and back-end developing. And we were assigned to work on a capstone project in collaboration with Machine Learning learning path and Mobile Development learning path.",
+    href: "https://grow.google/intl/id_id/bangkit/?tab=machine-learning",
   },
   {
     name: "Desnet Technology",
     logo: "/desnet.webp",
+    description:
+      "Designed and developed a web application using CodeIgniter 4 to manage items and mails within PT DES Teknologi Informasi.",
+    href: "https://desnet.id/",
   },
 ];
 
@@ -172,12 +185,16 @@ export default function Home() {
                         className="w-full"
                       />
                     </div>
-                    {item.name}
+                    {item.href ? (
+                      <Link href={item.href || "/"} target="_blank">
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <>{item.name}</>
+                    )}
                   </div>
                 </AccordionTrigger>
-                <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
+                <AccordionContent>{item.description}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
