@@ -17,12 +17,6 @@ const list = [
   { name: "Email" },
 ];
 
-const emailAddress = "prampokan@gmail.com";
-const handleEmail = () => {
-  const url = `mailto:${emailAddress}`;
-  window.location.href = url;
-};
-
 const tech = [
   {
     name: "Javascript",
