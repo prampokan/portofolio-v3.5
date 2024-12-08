@@ -1,5 +1,6 @@
 export const DATA = {
   name: "pramudya diagusta",
+  email: "prampokan@gmail.com",
   about:
     "a passionate software engineer who crafting dynamic and interactive applications.",
   socials: [

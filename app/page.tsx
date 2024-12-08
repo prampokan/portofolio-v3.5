@@ -154,8 +154,10 @@ export default function Home() {
                 />
               </div>
               <div className="absolute bottom-4">
-                <h1 className="text-sm font-semibold">Pramudya Diagusta</h1>
-                <p className="text-xs text-zinc-500">prampokan@gmail.com</p>
+                <h1 className="text-sm font-semibold capitalize">
+                  {DATA.name}
+                </h1>
+                <p className="text-xs text-zinc-500">{DATA.email}</p>
               </div>
             </div>
           </section>
