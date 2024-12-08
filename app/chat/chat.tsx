@@ -225,7 +225,7 @@ export default function Chat() {
           <Input
             type="text"
             placeholder="Aa"
-            className="bg-transparent rounded-full focus-visible:ring-transparent focus-visible:ring-offset-0 px-3"
+            className="bg-white dark:bg-zinc-800 rounded-full focus-visible:ring-transparent focus-visible:ring-offset-0 border-none px-3"
             value={formData}
             onChange={(e) => setFormData(e.target.value)}
             required
