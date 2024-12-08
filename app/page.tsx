@@ -50,7 +50,7 @@ export default function Home() {
                 {DATA.tech.map((item, i) => (
                   <div
                     key={i}
-                    className="max-w-none flex items-center gap-x-2 mx-2"
+                    className="max-w-none flex items-center gap-x-2 mx-2 cursor-default"
                   >
                     <Image
                       src={item.logo || "/vercel.svg"}
