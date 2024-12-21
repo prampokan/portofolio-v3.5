@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import Marquee from "@/components/ui/marquee";
 import BlurFade from "@/components/ui/blur-fade";
-import { HeartOff, MoveUpRight } from "lucide-react";
+import { MoveUpRight } from "lucide-react";
 import { DATA } from "@/data/resume";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -71,7 +71,7 @@ export default function Home() {
 
         {/* WORK EXPERIENCE */}
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <section className="pt-28" id="work">
+          <section className="pt-28" id="experience">
             <h1 className="text-xl font-semibold tracking-tight">Experience</h1>
             <p className="mt-5 leading-loose">{DATA.experience}</p>
             <Accordion type="single" collapsible className="w-full mt-5">
