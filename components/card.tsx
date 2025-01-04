@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Globe, Github } from "lucide-react";
+import BlurFade from "./ui/blur-fade";
 
 interface CardProps {
   title: string;
@@ -20,10 +21,14 @@ export default function Card({
   github,
 }: CardProps) {
   return (
-    <div className="border h-auto rounded-xl overflow-hidden">
-      <Link href={website || "/"} target="_blank" className="w-full">
+    <BlurFade yOffset={0} className="border h-auto rounded-xl overflow-hidden">
+      {website ? (
+        <Link href={website} target="_blank" className="w-full">
+          <Image src={image} alt="Image" width={500} height={500} />
+        </Link>
+      ) : (
         <Image src={image} alt="Image" width={500} height={500} />
-      </Link>
+      )}
       <div className="p-3 border-t">
         <div>
           <h1 className="font-semibold">{title}</h1>
@@ -62,6 +67,6 @@ export default function Card({
           )}
         </div>
       </div>
-    </div>
+    </BlurFade>
   );
 }

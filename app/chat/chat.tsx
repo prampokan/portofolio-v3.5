@@ -39,7 +39,11 @@ export default function Chat() {
   const { toast } = useToast();
 
   const SignInWithGoogle = async () => {
-    await signInWithPopup(auth, googleAuth);
+    try {
+      await signInWithPopup(auth, googleAuth);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const SignInWithGithub = async () => {
@@ -52,6 +56,7 @@ export default function Chat() {
           description: "Your email is already linked into google provider",
         });
       }
+      console.error(error);
     }
   };
 
