@@ -24,10 +24,22 @@ export default function Card({
     <BlurFade yOffset={0} className="border h-auto rounded-xl overflow-hidden">
       {website ? (
         <Link href={website} target="_blank" className="w-full">
-          <Image src={image} alt="Image" width={500} height={500} />
+          <Image
+            src={image}
+            alt="Image"
+            width={500}
+            height={500}
+            className="h-[160px] w-full object-cover"
+          />
         </Link>
       ) : (
-        <Image src={image} alt="Image" width={500} height={500} />
+        <Image
+          src={image}
+          alt="Image"
+          width={500}
+          height={500}
+          className="h-[160px] w-full object-cover"
+        />
       )}
       <div className="p-3 border-t">
         <div>
