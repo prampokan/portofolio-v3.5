@@ -119,20 +119,20 @@ export const DATA = {
       github: "https://github.com/Meatopia-Capstone-Team-C241-PS192",
     },
     {
-      title: "Fashion Online Shop",
-      description: "Sass Website to sell your fashion products",
-      image: "/tokoonline.png",
-      tech: ["Next.js", "Javascript", "Tailwind", "Firebase"],
-      website: "https://pramolshop.vercel.app/shop",
-      github: "https://github.com/prampokan/toko-online-next",
-    },
-    {
       title: "PokeNuxt",
       description: "Pokemon lists website using Poke Api",
       image: "/pokenuxt.png",
       tech: ["Nuxt.js", "Typescript", "Tailwind", "Poke Api"],
       website: "https://pokenuxt-blond.vercel.app/",
       github: "https://github.com/prampokan/pokemon-nuxt",
+    },
+    {
+      title: "Fashion Online Shop",
+      description: "Sass Website to sell your fashion products",
+      image: "/tokoonline.png",
+      tech: ["Next.js", "Javascript", "Tailwind", "Firebase"],
+      website: "https://pramolshop.vercel.app/shop",
+      github: "https://github.com/prampokan/toko-online-next",
     },
     {
       title: "Website KKN",
