@@ -99,7 +99,6 @@ export const DATA = {
       description: "Blog website about programming, etc",
       image: "/adonuxt.png",
       tech: ["Nuxt.js", "Typescript", "Tailwind", "Adonis.js"],
-      website: "https://meatopia.vercel.app/",
       github: "https://github.com/prampokan/adonuxt-blog",
     },
     {
@@ -115,8 +114,7 @@ export const DATA = {
       description: "The backend of AdoNuxt blog",
       image: "/adonuxt-api.png",
       tech: ["Adonis.js", "Lucid ORM", "MySql"],
-      website: "https://meatopia.vercel.app/",
-      github: "https://github.com/Meatopia-Capstone-Team-C241-PS192",
+      github: "https://github.com/prampokan/adonuxt-api",
     },
     {
       title: "PokeNuxt",
