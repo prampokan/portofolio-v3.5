@@ -51,6 +51,7 @@ export const DATA = {
       logo: "/fn.webp",
       description:
         "I work here as a front end website developer. Collaborate with a very competent team to create a game top up website, using technology such as javascript, typescript, next js, and react js. Working together using Jira and Github.",
+      href: "https://fndigitalcode.id/",
     },
     {
       name: "Bangkit Academy",
