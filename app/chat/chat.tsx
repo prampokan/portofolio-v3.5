@@ -62,7 +62,7 @@ export default function Chat() {
 
   useEffect(() => {
     getChats();
-  });
+  }, []);
 
   const getChats = async () => {
     try {
